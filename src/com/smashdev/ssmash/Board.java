@@ -1,6 +1,7 @@
 package com.smashdev.ssmash;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -68,68 +69,17 @@ public class Board {
 			G9.add(i, i+1);
 		}
 		
-		shuffleList(R1);
-		shuffleList(R2);
-		shuffleList(R3);
-		shuffleList(R4);
-		shuffleList(R5);
-		shuffleList(R6);
-		shuffleList(R7);
-		shuffleList(R8);
-		shuffleList(R9);
-		
-		shuffleList(C1);
-		shuffleList(C2);
-		shuffleList(C3);
-		shuffleList(C4);
-		shuffleList(C5);
-		shuffleList(C6);
-		shuffleList(C8);
-		shuffleList(C8);
-		shuffleList(C9);
-		
-		shuffleList(G1);
-		shuffleList(G2);
-		shuffleList(G3);
-		shuffleList(G4);
-		shuffleList(G5);
-		shuffleList(G6);
-		shuffleList(G7);
-		shuffleList(G8);
-		shuffleList(G9);
+		Collections.shuffle(R1);
+		Collections.shuffle(R2);
+		Collections.shuffle(R3);
+		Collections.shuffle(R4);
+		Collections.shuffle(R5);
+		Collections.shuffle(R6);
+		Collections.shuffle(R7);
+		Collections.shuffle(R8);
+		Collections.shuffle(R9);
 	}
 	
-	public void populatePossNums() {
-/*			R1.add(0, 1);
-			R2.add(1, 2);
-			R3.add(2, 3);
-			R4.add(3, 4);
-			R5.add(4, 5);
-			R6.add(5, 6);
-			R7.add(6, 7);
-			R8.add(7, 8);
-			R9.add(8, 9);
-			
-			C1.add(0, 1);
-			C2.add(1, 2);
-			C3.add(2, 3);
-			C4.add(3, 4);
-			C5.add(4, 5);
-			C6.add(5, 6);
-			C7.add(6, 7);
-			C8.add(7, 8);
-			C9.add(8, 9);
-			
-			G1.add(0, 1);
-			G2.add(1, 2);
-			G3.add(2, 3);
-			G4.add(3, 4);
-			G5.add(4, 5);
-			G6.add(5, 6);
-			G7.add(6, 7);
-			G8.add(7, 8);
-			G9.add(8, 9);*/
-	}
 	
 	public static void shuffleList(List<Integer> nums) {
 		int n = nums.size();
@@ -147,9 +97,9 @@ public class Board {
 		nums.set(change, helper);
 	}
 	
-/*	public static int getNumber(int index) {
-		
-	}*/
+	public int getNumber(List<Integer> row, int index) {
+		return row.get(index);
+	}
 	
 /*	private int[][] generateSolution(int[][] game, int index) {
 		for (int i = 0 ; i <= 8 ; i++) {
